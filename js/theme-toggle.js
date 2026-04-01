@@ -27,7 +27,7 @@
     root.classList.toggle(DARK, resolvedTheme === DARK);
     root.dataset.theme = resolvedTheme;
     root.style.colorScheme = resolvedTheme;
-    syncNavbarLogos(resolvedTheme);
+    syncThemeLogos(resolvedTheme);
     syncToggles(resolvedTheme);
   }
 
@@ -67,9 +67,9 @@
     });
   }
 
-  function syncNavbarLogos(theme) {
+  function syncThemeLogos(theme) {
     const isDark = theme === DARK;
-    document.querySelectorAll(".navbar-logo-image[data-logo-light][data-logo-dark]").forEach((logo) => {
+    document.querySelectorAll("img[data-logo-light][data-logo-dark]").forEach((logo) => {
       const nextSrc = isDark ? logo.dataset.logoDark : logo.dataset.logoLight;
       if (nextSrc && logo.getAttribute("src") !== nextSrc) {
         logo.setAttribute("src", nextSrc);
