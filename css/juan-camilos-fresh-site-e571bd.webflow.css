@@ -8413,8 +8413,24 @@ html.dark .section_global-location .top-text-location .link-white:hover {
   .top-text-location {
     max-width: 280px;
   }
+
+  .section_global-location .top-text-location [data-w-id],
+  .section_global-location .animated-element {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 /* End small-device location spacing refinement */
+
+/* iPhone XR-width instagram title refinement */
+@media screen and (min-width: 400px) and (max-width: 430px) {
+  .section-global-instagram-feed .instagram-title-tag-wrap h2 {
+    letter-spacing: 0;
+    font-size: 40px;
+    line-height: 1.02;
+  }
+}
+/* End iPhone XR-width instagram title refinement */
 
 /* Navbar logo-only mode */
 .nav-menu-items,
